@@ -6,19 +6,17 @@ import { AppComponent } from './app.component';
 import { SingupComponent } from './lib/autenticacion/singup/singup.component';
 import { LoginComponent } from './lib/autenticacion/login/login.component';
 import { EjemplosComponent } from './lib/ejemplos/ejemplos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SingupComponent,
     LoginComponent,
-    EjemplosComponent
+    EjemplosComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

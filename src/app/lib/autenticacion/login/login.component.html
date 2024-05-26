@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div>
+  <form>
+    <div>
+      <h1>{{ tituloform }}</h1>
+    </div>
+    <div>
+      <label for="emailuser">Email: </label>
+      <input
+        type="email"
+        [(ngModel)]="emailUser"
+        [ngModelOptions]="{ standalone: true }"
+        id="emailuser"
+      />
+    </div>
+    <div>
+      <label for="passuser">Password: </label>
+      <input
+        type="password"
+        id="passuser"
+        [(ngModel)]="passuser"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <div>
+      <input type="button" (click)="LogIn()" value="Sing-In" />
+    </div>
+    <p>{{ mensajeUser }}</p>
+    <p>{{ mensajePass }}</p>
+  </form>
+</div>
