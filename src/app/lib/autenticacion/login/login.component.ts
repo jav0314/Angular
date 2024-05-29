@@ -16,14 +16,14 @@ export class LoginComponent {
 
   LogIn() {
     if (this.emailUser !== this.userDefault) {
-      this.mensajeUser = 'El usuario ' + this.emailUser + ' es incorrecto';
+      this.mensajeUser = 'El usuario ' + this.emailUser + ' es incorrecto.';
     } else {
-      this.mensajeUser = 'El usuario ' + this.emailUser + ' es correcto';
+      this.mensajeUser = 'El usuario ' + this.emailUser + ' es correcto.';
     }
     if (this.passuser !== this.passDefault) {
-      this.mensajePass = 'La contraseña ' + this.passuser + ' es incorrecto';
+      this.mensajePass = 'La contraseña ' + this.passuser + ' es incorrecto.';
     } else {
-      this.mensajePass = 'La contraseña ' + this.passuser + ' es correcto';
+      this.mensajePass = 'La contraseña ' + this.passuser + ' es correcto.';
     }
   }
 }

@@ -1,4 +1,6 @@
-<div>
+<div
+  class="form-control w-50 position-absolute start-50 top-50 translate-middle"
+>
   <form>
     <div>
       <h1>{{ tituloform }}</h1>
@@ -10,6 +12,7 @@
         [(ngModel)]="emailUser"
         [ngModelOptions]="{ standalone: true }"
         id="emailuser"
+        class="form-control"
       />
     </div>
     <div>
@@ -19,12 +22,17 @@
         id="passuser"
         [(ngModel)]="passuser"
         [ngModelOptions]="{ standalone: true }"
+        class="form-control"
       />
     </div>
     <div>
-      <input type="button" (click)="LogIn()" value="Sing-In" />
+      <input
+        type="button"
+        (click)="LogIn()"
+        value="Sing-In"
+        class="btn btn-success mt-2"
+      />
     </div>
-    <p>{{ mensajeUser }}</p>
-    <p>{{ mensajePass }}</p>
+    <p>{{ mensajeUser }}{{ mensajePass }}</p>
   </form>
 </div>

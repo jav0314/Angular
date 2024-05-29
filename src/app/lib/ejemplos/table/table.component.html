@@ -1,0 +1,65 @@
+<div class="table-responsive">
+  <h1>Lista de productos</h1>
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Modelo</th>
+        <th>Proveedor</th>
+        <th>Precio</th>
+        <!-- <th>Cantidad</th> -->
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let producto of listaProducto">
+        <td>{{ producto.producto }}</td>
+        <td>{{ producto.modelo }}</td>
+        <td>{{ producto.proveedor }}</td>
+        <td>{{ producto.precio }}</td>
+        <!-- <td>{{ producto.cantidad }}</td> -->
+        <td>
+          <input
+            type="button"
+            value="Agregar"
+            class="btn btn-success"
+            (click)="agregarCarrito(producto)"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Carrita de produtos</h1>
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Modelo</th>
+        <th>Proveedor</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let producto of listaCarrito">
+        <td>{{ producto.producto }}</td>
+        <td>{{ producto.modelo }}</td>
+        <td>{{ producto.proveedor }}</td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>
+          <input
+            type="button"
+            value="Eliminar"
+            class="btn btn-danger"
+            (click)="eliminarRegistro(producto)"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

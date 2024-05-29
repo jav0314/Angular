@@ -7,6 +7,7 @@ import { SingupComponent } from './lib/autenticacion/singup/singup.component';
 import { LoginComponent } from './lib/autenticacion/login/login.component';
 import { EjemplosComponent } from './lib/ejemplos/ejemplos.component';
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './lib/ejemplos/table/table.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     SingupComponent,
     LoginComponent,
     EjemplosComponent,
+    TableComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
