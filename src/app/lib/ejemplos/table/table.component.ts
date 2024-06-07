@@ -27,6 +27,11 @@ export class TableComponent {
 
   listaCarrito: ProductDetail[] = [];
 
+  totalProductos: number = 0;
+  subtotal: number = 0;
+  impuesto: number = 0;
+  totalpagar: number = 0;
+
   agregarCarrito(producto: ProductDetail) {
     if (this.listaCarrito.length === 0) {
       producto.cantidad = 1;
@@ -48,10 +53,27 @@ export class TableComponent {
         this.listaCarrito.push(producto);
       }
     }
+    this.totalProducts();
   }
 
   eliminarRegistro(producto: ProductDetail) {
     const posicionProducto = this.listaCarrito.indexOf(producto);
     this.listaCarrito.splice(posicionProducto, 1);
+    this.totalProducts();
+  }
+
+  totalProducts() {
+    this.totalProductos = this.listaCarrito.reduce(
+      (sum, producto) => sum + (producto.cantidad ?? 0),
+      0
+    );
+
+    this.subtotal = this.listaCarrito.reduce(
+      (sum, producto) => sum + producto.precio * (producto.cantidad ?? 0),
+      0
+    );
+
+    this.impuesto = this.subtotal * 0.15;
+    this.totalpagar = this.impuesto + this.subtotal;
   }
 }

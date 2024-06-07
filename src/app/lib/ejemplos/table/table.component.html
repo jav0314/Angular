@@ -31,7 +31,7 @@
     </tbody>
   </table>
 
-  <h1>Carrita de produtos</h1>
+  <h1>Carrito de produtos</h1>
   <table class="table table-striped mt-5">
     <thead>
       <tr>
@@ -62,4 +62,49 @@
       </tr>
     </tbody>
   </table>
+
+  <form>
+    <div>
+      <label for="totalProductos"><b>Productos Totales</b></label>
+      <input
+        type="text"
+        value="0"
+        id="totalProductos"
+        [(ngModel)]="totalProductos"
+        [ngModelOptions]="{ standalone: true }"
+        style="border: none; box-shadow: none"
+        readonly
+      />
+      <label for="subtotal"><b>Subtotal</b></label>
+      <input
+        type="text"
+        value="0"
+        [(ngModel)]="subtotal"
+        [ngModelOptions]="{ standalone: true }"
+        id="subtotal"
+        style="border: none; box-shadow: none"
+        readonly
+      />
+      <label for="impuestos"><b>Impuesto 15%</b></label>
+      <input
+        type="text"
+        value="0"
+        [(ngModel)]="impuesto"
+        [ngModelOptions]="{ standalone: true }"
+        id="impuesto"
+        style="border: none; box-shadow: none"
+        readonly
+      />
+      <label for="totalpagar"><b>total a pagar</b></label>
+      <input
+        type="text"
+        value="0"
+        [(ngModel)]="totalpagar"
+        [ngModelOptions]="{ standalone: true }"
+        id="totalpagar"
+        style="border: none; box-shadow: none"
+        readonly
+      />
+    </div>
+  </form>
 </div>
