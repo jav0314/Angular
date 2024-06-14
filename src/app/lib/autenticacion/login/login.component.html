@@ -1,9 +1,9 @@
 <div
-  class="form-control w-50 position-absolute start-50 top-50 translate-middle"
+  class="form-control w-25 position-absolute start-50 top-50 translate-middle"
 >
   <form>
     <div>
-      <h1>{{ tituloform }}</h1>
+      <h1>Iniciar sesión</h1>
     </div>
     <div>
       <label for="emailuser">Email: </label>
@@ -29,9 +29,10 @@
       <input
         type="button"
         (click)="LogIn()"
-        value="Sing-In"
-        class="btn btn-success mt-2"
+        value="Ingresar"
+        class="btn btn-success m-2"
       />
+      <input type="button" value="Registrarse" class="btn btn-primary m2" />
     </div>
     <p>{{ mensajeUser }}{{ mensajePass }}</p>
   </form>

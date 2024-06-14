@@ -8,16 +8,12 @@ import { LoginComponent } from './lib/autenticacion/login/login.component';
 import { EjemplosComponent } from './lib/ejemplos/ejemplos.component';
 import { FormsModule } from '@angular/forms';
 import { TableComponent } from './lib/ejemplos/table/table.component';
+import { AutenticacionComponent } from './lib/autenticacion/autenticacion/autenticacion.component';
+import { AutenticacionModule } from './lib/autenticacion/autenticacion.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SingupComponent,
-    LoginComponent,
-    EjemplosComponent,
-    TableComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [AppComponent, EjemplosComponent, TableComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, AutenticacionModule],
   providers: [],
   bootstrap: [AppComponent],
 })

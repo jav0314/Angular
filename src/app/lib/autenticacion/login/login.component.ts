@@ -6,24 +6,23 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  userDefault: string = 'carlita@tuamorcito.com';
+  userDefault: string = 'javmeridadev@gmail.com';
   passDefault: string = '03032024';
   mensajeUser = '';
   mensajePass = '';
   emailUser: string = '';
   passuser: string = '';
-  tituloform: string = 'FORMULARIO PRUEBA';
 
   LogIn() {
     if (this.emailUser !== this.userDefault) {
-      this.mensajeUser = 'El usuario ' + this.emailUser + ' es incorrecto.';
+      this.mensajeUser = 'El usuario ' + this.emailUser + ' es incorrecto. ';
     } else {
-      this.mensajeUser = 'El usuario ' + this.emailUser + ' es correcto.';
+      this.mensajeUser = 'El usuario ' + this.emailUser + ' es correcto. ';
     }
     if (this.passuser !== this.passDefault) {
-      this.mensajePass = 'La contraseña ' + this.passuser + ' es incorrecto.';
+      this.mensajePass = 'La contraseña es incorrecta.';
     } else {
-      this.mensajePass = 'La contraseña ' + this.passuser + ' es correcto.';
+      this.mensajePass = 'La contraseña es correcta.';
     }
   }
 }

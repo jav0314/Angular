@@ -1,1 +1,69 @@
-<p>singup works!</p>
+<div
+  class="form-control w-50 position-absolute start-50 top-50 translate-middle"
+>
+  <form>
+    <div>
+      <h1>SingUp</h1>
+    </div>
+    <div>
+      <label for="name">Nombre: </label>
+      <input
+        type="text"
+        [(ngModel)]="nombre"
+        [ngModelOptions]="{ standalone: true }"
+        id="name"
+        class="form-control"
+      />
+    </div>
+    <div>
+      <label for="apellido">Apellido: </label>
+      <input
+        type="text"
+        [(ngModel)]="apellido"
+        [ngModelOptions]="{ standalone: true }"
+        id="apellido"
+        class="form-control"
+      />
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        [ngModelOptions]="{ standalone: true }"
+        id="email"
+        class="form-control"
+      />
+    </div>
+    <div>
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        [ngModelOptions]="{ standalone: true }"
+        id="password"
+        class="form-control"
+      />
+    </div>
+    <div>
+      <label for="passConfirm">Confirmar Contraseña: </label>
+      <input
+        type="password"
+        [(ngModel)]="passwordConfirm"
+        [ngModelOptions]="{ standalone: true }"
+        id="passConfirm"
+        class="form-control"
+      />
+    </div>
+
+    <div>
+      <input
+        type="button"
+        (click)="SingUp()"
+        value="SingUp"
+        class="btn btn-success mt-2"
+      />
+    </div>
+    <!-- <p>{{ mensajeUser }}{{ mensajePass }}</p> -->
+  </form>
+</div>
