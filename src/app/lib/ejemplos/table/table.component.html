@@ -14,7 +14,7 @@
             <th>Modelo</th>
             <th>Proveedor</th>
             <th>Precio</th>
-            <!-- <th>Cantidad</th> -->
+            <th>Stock</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -25,13 +25,22 @@
             <td>{{ producto.modelo }}</td>
             <td>{{ producto.proveedor }}</td>
             <td>{{ producto.precio }}</td>
-            <!-- <td>{{ producto.cantidad }}</td> -->
+            <td>{{ producto.stock }}</td>
             <td>
               <input
+                *ngIf="validaStock(producto)"
                 type="button"
                 value="Agregar"
                 class="btn btn-success"
                 (click)="agregarCarrito(producto)"
+              />
+              <input
+                *ngIf="!validaStock(producto)"
+                type="button"
+                value="Agregar"
+                class="btn btn-success"
+                (click)="agregarCarrito(producto)"
+                disabled
               />
             </td>
           </tr>
