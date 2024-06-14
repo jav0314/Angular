@@ -10,18 +10,19 @@ export class TableComponent {
   listaProducto: ProductDetail[] = [
     {
       productoId: 1,
-      producto: 'Play Station 5',
-      modelo: 'H&B',
+      producto: 'Play Station 4',
+      modelo: 'Slim',
       proveedor: 'H&B',
       precio: 500,
+      stock: 3,
     },
     {
       productoId: 2,
-      producto: 'Xbox',
-      modelo: 'Microsoft',
+      producto: 'XBOX',
+      modelo: '360',
       proveedor: 'TechSupplier',
       precio: 450,
-      cantidad: 30,
+      stock: 4,
     },
   ];
 
@@ -75,5 +76,20 @@ export class TableComponent {
 
     this.impuesto = this.subtotal * 0.15;
     this.totalpagar = this.impuesto + this.subtotal;
+  }
+
+  validaStock(productoStock: ProductDetail) {
+    let isValid: boolean = true;
+    this.listaProducto.forEach((producto) => {
+      if (producto.productoId === productoStock.productoId) {
+        let cantidad = productoStock.cantidad ?? 0;
+        if (producto.stock > cantidad) {
+          isValid = true;
+        } else {
+          isValid = false;
+        }
+      }
+    });
+    return isValid;
   }
 }

@@ -5,4 +5,5 @@ export interface ProductDetail {
   proveedor: string;
   precio: number;
   cantidad?: number;
+  stock: number;
 }
